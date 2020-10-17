@@ -4,7 +4,6 @@ public class Barrieres {
 
     private boolean ouvert;         //true = ouvertes, false = fermées
     private final int rayon;        //rayon de détection
-    private int distanceTrain;      //distance train-barrières ; on suppose 1 seul train
 
     public Barrieres(int rayon, int distanceTrain) {
         ouvert = false;
@@ -12,18 +11,23 @@ public class Barrieres {
     }
 
     public boolean isDetect(Train t) {
-        if(t.getDist() < rayon)
+        if(Math.abs(t.getDist()) <= rayon) {
             return true;
+        }
         return false;
     }
 
-    public void actionBarriere(boolean isDetect, ArrayList<Voiture> voitures) {
-        if (isDetect) {
-            if(voitureSurRail(voitures))
+    public void actionBarriere(Train t, ArrayList<Voiture> voitures) {
+        if (isDetect(t)) {
+            if(voitureSurRail(voitures)) {
                 ouvert = true;
-            ouvert = false;
+            }
+            else {
+                ouvert = false;
+            }
         }
-        ouvert = true;
+        else
+            ouvert = true;
     }
 
     public static boolean voitureSurRail(ArrayList<Voiture> voitures) {

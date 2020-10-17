@@ -1,22 +1,27 @@
 public class Train {
 
-    private int dist;
+    private int distTrain;  //distance train-barrières
     //on pourra plus tard ajouter une vitesse?
+    //pour l'instant, on ne tient pas compte de la longueur du train
 
     public Train(int dist) {
-        this.dist = dist;
+        this.distTrain = dist;
     }
 
     public int getDist() {
-        return dist;
+        return distTrain;
     }
 
-    public void addDist() {
+/*
+    public void reculerTrain() {
         dist++;
     }
+*/
 
-    public void subDist() {
-        dist--;
+    public void avancerTrain() {
+        distTrain--;
+        if(distTrain < -20)
+            distTrain = 20;
     }
 
 }

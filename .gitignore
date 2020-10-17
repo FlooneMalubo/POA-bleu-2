@@ -4,3 +4,10 @@
 .idea/vcs.xml
 RENDU2.iml
 .idea/POA-bleu-2.iml
+.idea/uiDesigner.xml
+out/production/RENDU2/Barrieres.class
+out/production/RENDU2/CreerEnvironnement.class
+out/production/RENDU2/Croisement.class
+out/production/RENDU2/Train.class
+out/production/RENDU2/Voiture.class
+out/production/RENDU2/readme.md
