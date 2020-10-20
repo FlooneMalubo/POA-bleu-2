@@ -42,4 +42,7 @@ public class Barrieres {
         return ouvert;
     }
 
+    public int getRayon() {
+        return rayon;
+    }
 }

@@ -52,4 +52,8 @@ public class Croisement {
         }
     }
 
+    public void printRayon() {
+        System.out.println("Rayon de perception des barrières : " + barrieres.getRayon());
+    }
+
 }

@@ -8,6 +8,9 @@ public class CreerEnvironnement {
         Croisement c = new Croisement(6,7,3,4);
 
         //print état initial 0
+        System.out.println("########## DEBUT DE LA SIMULATION ##########");
+        c.printRayon();
+        System.out.print("État initial :");
         c.printEtat(0);
 
         for(int i = 1; i <= nbTour; i++) {
