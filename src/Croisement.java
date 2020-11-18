@@ -46,7 +46,7 @@ public class Croisement {
         barrieres.actionBarriere(train, voitures);
         for(Voiture v : voitures) {
             if (barrieres.isOuvert() || (!barrieres.isOuvert() && (v.getDist() != 1))) {
-                if (!v.voitureDevantMoi(voitures))
+                if ((!v.voitureDevantMoi(voitures)) && (!v.voitureDevantMoiApresRails(voitures)))
                     v.avancerVoiture();
             }
         }

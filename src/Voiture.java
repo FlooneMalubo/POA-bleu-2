@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Voiture {
@@ -27,6 +28,15 @@ public class Voiture {
     public boolean voitureDevantMoi(ArrayList<Voiture> voitures) {
         for(Voiture v : voitures) {
             if(v.getDist() == this.getDist() - 1)
+                return true;
+        }
+        return false;
+    }
+
+    public boolean voitureDevantMoiApresRails(ArrayList<Voiture> voitures) {
+        int myDist = this.getDist();
+        for(Voiture v : voitures) {
+            if((myDist == 1) && (v.getDist() == -1))
                 return true;
         }
         return false;
